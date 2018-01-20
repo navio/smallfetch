@@ -1,5 +1,5 @@
 {
-  "name": "jsonfetch",
+  "name": "smallfetch",
   "version": "1.0.0",
   "description": "Pre configured fetch to request. Returns an object.",
   "main": "index.js",
@@ -7,10 +7,10 @@
     "build": "microbundle",
     "dev": "microbundle watch"
   },
-  "module":"jsonfetch.js",
+  "module":"smallfetch.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:navio/jsonfetch.git"
+    "url": "git@github.com:navio/smallfetch.git"
   },
   "keywords": [
     "fetch",
@@ -20,9 +20,9 @@
   "author": "Alberto Navarro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/navio/jsonfetch/issues"
+    "url": "https://github.com/navio/smallfetch/issues"
   },
-  "homepage": "https://github.com/navio/jsonfetch#readme",
+  "homepage": "https://github.com/navio/smallfetch#readme",
   "devDependencies": {
     "microbundle": "^0.3.1"
   }

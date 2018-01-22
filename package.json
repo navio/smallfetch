@@ -4,7 +4,7 @@
   "description": "Pre configured fetch to request. Returns an object.",
   "main": "index.js",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle -f es",
     "dev": "microbundle watch"
   },
   "module":"smallfetch.js",

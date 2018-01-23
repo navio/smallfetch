@@ -10,12 +10,11 @@
 # smallfetch
 
 This module is meant to reduce the configuration to interact with *Fetch*. 
-> Minimal implementation of 200B ideal for Browsers or Node.
+> Tiny implementation of 200B ideal for Browsers or Node.
 * It sets headers by default to 'application/json'.
-* It receives a JS object stringify it and send it in the body.
+* It receives Object and stringify as body content for PUT/POST/PATCH.
 * It parses server response to JSON.
 * It throws a cachable error when the response is not in the range 200-299.
-
 
 
 Get - Query
@@ -38,3 +37,5 @@ Get - Query
   .then(response=>console.log(response))
  .catch(error=>console.log('something went wrong',error));
 ```
+
+If you don't want to throw an error on fail add a extra parameter false.

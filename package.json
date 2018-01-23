@@ -1,10 +1,10 @@
 {
   "name": "smallfetch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pre configured fetch to request. Returns an object.",
   "main": "index.js",
   "scripts": {
-    "build": "microbundle -f es",
+    "build": "microbundle",
     "dev": "microbundle watch"
   },
   "module":"smallfetch.js",

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://imgur.com/a/zEraO" width="259" height="276" alt="smallfetch">
+  <img src="https://i.imgur.com/LDzj7r6.png" width="170" height="181" >
   <br>
   <a href="https://www.npmjs.org/package/smallfetch">
    <img src="https://img.shields.io/npm/v/smallfetch.svg?style=flat" alt="smallfetch">

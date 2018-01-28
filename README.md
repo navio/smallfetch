@@ -1,41 +1,63 @@
 <p align="center">
   <img src="https://i.imgur.com/LDzj7r6.png" width="170" height="181" >
-  <br>
+  <br>ed
   <a href="https://www.npmjs.org/package/smallfetch">
    <img src="https://img.shields.io/npm/v/smallfetch.svg?style=flat" alt="smallfetch">
  </a> 
-    <a href="https://david-dm.org/developit/smallfetch"><img src="https://david-dm.org/developit/smallfetch/status.svg" alt="dependencies Status"></a>
+
 </p>
 
 # smallfetch
 
-This module is meant to reduce the configuration to interact with *Fetch*. 
-> Tiny implementation of 200B ideal for Browsers or Node.
-* It sets headers by default to 'application/json'.
-* It receives Object and stringify as body content for PUT/POST/PATCH.
+_Smallfetch_ is a pre configured fetch object ready to interact with a Rest API
+> Tiny implementation of 200B with no dependencies.
+* It sets headers by default to **'application/json'**.
+* It _stringify_ object payload and pass it as body content for PUT/POST/PATCH.
 * It parses server response to JSON.
 * It throws a cachable error when the response is not in the range 200-299.
 
 
-Get - Query
+----------
+
+
+### Installation
+```bash
+npm install smallfetch
+```
+ ```js
+ import sf from 'smallfetch';
+ ```
+
+### Usage
+#### Get - Search
 ```js
- import fetcher from 'smallfetch';
- // Get Request
- let books = await fetcher('https://example.com/books');
- console.log(books);
+let books = await sf('https://example.com/books');
+console.log(books);
  ```
- Post - Create
+ #### Post - Create
  ```js
- // POST Create
- fetcher('https://example.com/books','POST',{name:'Book Name',desc:'Description'})
- .then(response=>console.log(response))
- .catch(error=>console.log('something is wrong',error));
+sf('https://example.com/books','POST',{name:'Book Name',desc:'Description'})
+.then(response=>console.log(response))
+.catch(error=>console.log('something is wrong',error));
  ```
- Put - Update
+#### Put - Update
  ```js
- fetcher('https://example.com/books/1','PUT',{name:'Book Name',desc:'Description'})
-  .then(response=>console.log(response))
- .catch(error=>console.log('something went wrong',error));
+sf('https://example.com/books/1','PUT',{name:'Book Name',desc:'Description'})
+.then(response=>console.log(response))
+.catch(error=>console.log('something went wrong',error));
 ```
 
-If you don't want to throw an error on fail add a extra parameter false.
+To avoid throwing errors (for parallel request) pass false  at the end of the request.
+
+```js
+Promise.all([
+sf('https://example.com/books/1','POST',false),
+sf('https://example.com/books/2','POST',false),
+sf('https://example.com/books/3','POST',false)
+]).then(results=>{
+	results.forEach(result=>console.log(result))
+});
+```
+All request will execute without failing. If the request fail an object with the request data will be returned but no exception will be thrown.
+
+

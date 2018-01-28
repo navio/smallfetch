@@ -1,6 +1,6 @@
 {
   "name": "smallfetch",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Pre configured fetch object ready to interact with Rest API. Receives @URL, @METHOD and @PAYLOAD.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,8 @@
     "dev": "microbundle watch"
   },
   "module": "smallfetch.js",
+  "files":[ "index.js", "index.umd.js"
+	],
   "repository": {
     "type": "git",
     "url": "git@github.com:navio/smallfetch.git"

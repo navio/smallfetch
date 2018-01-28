@@ -1,7 +1,7 @@
 {
   "name": "smallfetch",
   "version": "1.0.7",
-  "description": "Pre configured fetch to request. Returns an object.",
+  "description": "Pre configured fetch object ready to interact with Rest API. Receives @URL, @METHOD and @PAYLOAD.",
   "main": "index.js",
   "scripts": {
     "build": "microbundle",

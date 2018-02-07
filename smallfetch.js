@@ -6,8 +6,8 @@ export default (url, method = 'GET', json, shouldFail = (json||true) ) => {
     headers: {
       'Accept': rs,
       'Content-Type': rs,
-      'credentials': 'include'
     },
+    'credentials': 'include',
     body: JSON.stringify(json)
   }).then(x => {
     if (!x.ok && shouldFail) throw x;
